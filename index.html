@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Sales</h1>
+    <form action="/predict" method="post">
+        <label for="Customers">Customers:</label>
+        <input type="number" id="Customers" name="Customers" required>
+
+        <label for="Open">Open (1: Open, 0: Closed):</label>
+        <input type="number" id="Open" name="Open" required>
+
+        <label for="Weekday">Weekday (1-7):</label>
+        <input type="number" id="Weekday" name="Weekday" required>
+
+        <label for="DayOfWeek">Day Of Week (1-7):</label>
+        <input type="number" id="DayOfWeek" name="DayOfWeek" required>
+
+        <label for="IsWeekend">Is Weekend (1: Yes, 0: No):</label>
+        <input type="number" id="IsWeekend" name="IsWeekend" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
